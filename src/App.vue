@@ -1,9 +1,6 @@
 <template>
-<!--  <img alt="Vue logo" src="./assets/logo.png">-->
-<!--  <img alt="AtomicWallet logo" src="./assets/atomic_wallet_logo_dark_rounded.png" width="200" height="200">-->
   <AtomicHeader />
   <AtomicBody />
-
 </template>
 
 <script lang="ts">
@@ -22,15 +19,9 @@ import AtomicHeader from './components/AtomicHeader.vue';
 })
 
 export default class App extends Vue {
-
-
-
-
   created() {
     this.$store.dispatch('fetchCoinsGeneralData');
   }
-
-  someData = "some data";
 }
 
 </script>

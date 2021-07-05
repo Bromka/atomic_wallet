@@ -3,7 +3,6 @@
     Text
 
 }
-
  class Title {
     type: TitleType = TitleType.Text;
     short: string
@@ -15,5 +14,4 @@
         this.type = type ?? TitleType.Text;
     }
 }
-
 export {Title, TitleType};

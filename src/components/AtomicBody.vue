@@ -2,10 +2,9 @@
   <div class="table" v-if="isShow">
     <div v-for="title in titles" class="table__header__item" :key="title.short" @click="titleClick($event, title)">
       <div class="div">
-        <span v-if="Qbe.field == title" v-text="Qbe.sort == 0 ? '▼' : '▲'" />
+        <span v-if="Qbe.field == title" v-text="Qbe.sort == 0 ? '▼' : '▲'"/>
         {{ title.text }}
       </div>
-
     </div>
     <template class="table__body__line" v-for="coin in coins" :key="coin.id">
       <template v-for="elem in titles" :key="elem.short">
@@ -27,7 +26,6 @@
 
 <script lang="ts">
 import {Options, Vue} from 'vue-class-component';
-// import {TitleType} from '@/models/Title';
 import {mapGetters} from "vuex";
 import {Title} from "@/models/Title";
 
@@ -53,10 +51,11 @@ export default class AtomicBody extends Vue {
     return this.$store.getters.getTitles;
   }
 
-  get Qbe(){
+  get Qbe() {
     return this.$store.getters.getQbe;
   }
-  get isShow(){
+
+  get isShow() {
     return true;
   }
 
@@ -79,6 +78,7 @@ export default class AtomicBody extends Vue {
   .table__header__item {
     border-bottom: 3px solid #1e7ae6;
     padding: 1rem 0 1rem 0;
+
     * {
       user-select: none;
     }
